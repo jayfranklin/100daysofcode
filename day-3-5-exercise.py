@@ -47,7 +47,7 @@ total_score_int = int(total_score)
 
 if total_score_int < 10 or total_score_int > 90:
   print(f"Total score is {total_score} and you go together like coke and mentos.")
-elif total_score_int > 40 and total_score_int < 50:
+elif total_score_int >= 40 and total_score_int <= 50:
   print(f"Total score is {total_score} and you are alright together.")
 else:
   print(f"Total score is {total_score}.")
