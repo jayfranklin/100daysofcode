@@ -13,10 +13,10 @@ if size == "S":
   if add_pepperoni == "Y":
     bill +=2
 
-if size =="M":
+elif size =="M":
   bill +=20
 
-if size =="L":
+elif size =="L":
   bill +=25
 
 if (size == "M" or size =="L") and add_pepperoni == "Y":
