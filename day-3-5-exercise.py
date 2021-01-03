@@ -7,40 +7,35 @@ name2 = input("What is their name? \n")
 #Write your code below this line 👇
 
 # Convert names to lowercase
-n1_lower = name1.lower()
-n2_lower = name2.lower()
+names = name1 + name2
+names_lower = names.lower()
 
-truelove = "truelove"
+#truelove = "truelove"
+true = "true"
+love = "love"
 
-n1_score = 0
-n1_score += n1_lower.count(truelove[0])
-n1_score += n1_lower.count(truelove[1])
-n1_score += n1_lower.count(truelove[2])
-n1_score += n1_lower.count(truelove[3])
-n1_score += n1_lower.count(truelove[4])
-n1_score += n1_lower.count(truelove[5])
-n1_score += n1_lower.count(truelove[6])
-n1_score += n1_lower.count(truelove[7])
 
-# Testing variables
-#print(n1_score)
-
-n2_score = 0
-n2_score += n2_lower.count(truelove[0])
-n2_score += n2_lower.count(truelove[1])
-n2_score += n2_lower.count(truelove[2])
-n2_score += n2_lower.count(truelove[3])
-n2_score += n2_lower.count(truelove[4])
-n2_score += n2_lower.count(truelove[5])
-n2_score += n2_lower.count(truelove[6])
-n2_score += n2_lower.count(truelove[7])
-
+true_score = 0
+true_score += names_lower.count(true[0])
+true_score += names_lower.count(true[1])
+true_score += names_lower.count(true[2])
+true_score += names_lower.count(true[3])
 
 
 # Testing variables
-#print(n2_score)
+#print(true_score)
+
+love_score = 0
+love_score += names_lower.count(love[0])
+love_score += names_lower.count(love[1])
+love_score += names_lower.count(love[2])
+love_score += names_lower.count(love[3])
+
+
+# Testing variables
+#print(love_score)
 #
-total_score = str(n1_score) + str(n2_score)
+total_score = str(true_score) + str(love_score)
 #
 #print(type(total_score))
 #
