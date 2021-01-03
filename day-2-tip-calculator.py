@@ -17,9 +17,6 @@ people = input("How many people should split the bill? ")
 # Correct psudocode
 # total = (tip / 1000 * subtotal + subtotal) / people
 
-# Calculate the tip amount -- WRONG maths
-#tiptotal = float(subtotal) / float(tip) + float(subtotal)
-
 tiptotal = ((float(tip) / 100 * float(subtotal) + float(subtotal)))
 
 total = round(float(tiptotal) / float(people),2)
