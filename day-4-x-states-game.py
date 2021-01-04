@@ -40,7 +40,7 @@ if (guess[r-1] in states):
 
 '''
 
-while len(guesses) 50 :
+while len(guesses) <50 :
   guess = input("Enter a state name: ")
   if (guess in states) and (guess not in guesses):
     tries += 1
