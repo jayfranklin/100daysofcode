@@ -31,6 +31,12 @@ scissors = '''
 ---.__(___)
 '''
 
+# Kick the user out if they enter an invalid number
+if input >2:
+  print("You typed an invalid number. Quitting...")
+  quit()
+
+
 # Generate a list with the different choices
 choices = [rock, paper, scissors]
 
