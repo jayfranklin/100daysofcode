@@ -16,7 +16,7 @@ column = int(position[1])
 #print(row)
 #print(column)
 
-# Now we need to change  the value of our position [] to an X. We have to use -1 otherwise, we can get an IndexError
+# Now we need to change  the value of our position [] to an X. We have to use -1 otherwise, we will get an Index Range Error
 map[row-1][column-1] = "X"
 
 
