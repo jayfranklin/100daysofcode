@@ -1,0 +1,69 @@
+# Rock Paper Scissors game
+
+import random
+
+input = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors. "))
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+# Generate a list with the different choices
+choices = [rock, paper, scissors]
+
+# Generate a computer response
+opponent = random.randint(0,2)
+
+print(f"{input} \n\n ")
+print(f"{choices[input]}\n\n")
+
+print("Computer chose:\n\n")
+print(f"{choices[opponent]}\n\n")
+
+# Game logic
+#print(f"input is {input} and opponent is {opponent} \n")
+
+print("\n")
+
+if input == 0 and opponent == 0:
+  print("It's a tie")
+elif input == 0 and opponent == 1:
+  print("You lose")
+elif input == 0 and opponent == 2:
+  print("You win")
+elif input == 1 and opponent == 0:
+  print("You win")
+elif input == 1 and opponent == 1:
+  print("It's a tie")
+elif input == 1 and opponent == 2:
+  print("You lose")
+elif input == 2 and opponent == 0:
+  print("You lose")
+elif input == 2 and opponent == 1:
+  print("You win")
+elif input == 2 and opponent == 2:
+  print("It's a tie")
+
