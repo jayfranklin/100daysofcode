@@ -29,6 +29,11 @@ while i < nr_numbers:
   secure += random.choice(symbols)
   i += 1
 
+# Alternate method using for loop (duplicate for each list above)
+#for i in range(1, nr_letters +1):
+#  secure += random.choice(letters)
+
+
 print(f"Your secure password is:\t{secure}")
 
 
@@ -38,5 +43,11 @@ print(f"Your secure password is:\t{secure}")
 
 # Let's randomize our secure password
 secure_new = ''.join(random.sample(secure,len(secure)))
+
+# Alternate method using random.shuffle
+#secure_new = random.shuffle(secure)
+#for i in secure:
+#  secure2 += i
+
 
 print(f"Your new secure password is: \t{secure_new}")
