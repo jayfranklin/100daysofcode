@@ -25,6 +25,28 @@ while continue_running:
     continue_running = False
   clear()
 
+
+def highest_bidder(bid):
+  highest_bid = 0
+  winner = ""
+  for person in bid:
+    amount = bid[person]
+    if amount > highest_bid:
+      highest_bid = amount
+      winner = person
+  print(f"The highest bidder is {winner} with a bid of ${highest_bid}")
+
+# Determine the winner
+highest_bidder(bids)
+
+
+# Alternative to iterating the dictionary
+#
+
+'''  # Original method splitting the dictionary into lists, sorting to find the max value, 
+         finding the index of that value in original list, and using the value of max index
+         to find the original key value, which would be the winning bidder
+
 # Split dictionary into two lists, keys and values
 key_list = list(bids.keys())
 value_list = list(bids.values())
@@ -52,8 +74,5 @@ print(f"The highest bid was {winner} with ${high_bid}")
 
 
 
-
-
-
     
-
+'''
