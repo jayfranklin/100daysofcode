@@ -2,11 +2,11 @@
 import random
 
 # Import art
-from art import logo  # Main logo
-from art import vs    # VS logo
+from higher_lower_art import logo  # Main logo
+from higher_lower_art import vs    # VS logo
 
 # Import game data
-from game_data import data
+from higher_lower_data import data
 
 # Import clear function
 from replit import clear
