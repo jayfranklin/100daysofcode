@@ -56,8 +56,9 @@ def end_game():
 
 continue_game = True
 while continue_game == True:
-  # Determine who is winner for next round
-  winner = {}
+  # Are we playing higher or lower for this round? 0 = Higher, 1 = Lower
+  version = random.randint(0,1)
+      
   # Print main logo
   print(logo)
   
@@ -69,26 +70,47 @@ while continue_game == True:
   print(vs) # VS logo
   b_stats(person_b)
 
-  guess = input("Who has more followers? Type 'A' or 'B': ")
-  if guess == 'A':
-    if person_a.get('follower_count')  > person_b.get('follower_count'):
-      correct_count += 1
-      winner = person_a
-      #clear()
+  if version == 0:
+    guess = input("Who has more followers? Type 'A' or 'B': ")
+    if guess == 'A':
+      if person_a.get('follower_count') > person_b.get('follower_count'):
+        correct_count += 1
+        #winner = person_a
+        #clear()
+      else:
+        print("Incorrect. You lose.")
+        continue_game = False
     else:
-      print("Incorrect. You lose.")
-      continue_game = False
+      if person_a.get('follower_count')  < person_b.get('follower_count'):
+        correct_count += 1
+        #winner = person_b
+        #clear()
+      else:
+        print("Incorrect. You lose.")
+        continue_game = False
   else:
-    if person_a.get('follower_count')  < person_b.get('follower_count'):
-      correct_count += 1
-      winner = person_b
-      #clear()
+    guess = input("Who has less followers? Type 'A' or 'B': ")
+    if guess == 'A':
+      if person_a.get('follower_count') < person_b.get('follower_count'):
+        correct_count += 1
+        #winner = person_a
+        #clear()
+      else:
+        print("Incorrect. You lose.")
+        continue_game = False
     else:
-      print("Incorrect. You lose.")
-      continue_game = False
+      if person_a.get('follower_count') > person_b.get('follower_count'):
+        correct_count += 1
+        #winner = person_b
+        #clear()
+      else:
+        print("Incorrect. You lose.")
+        continue_game = False
   
-  # Move winning player to person_a and generate new person_b
-  person_a = winner
+
+  
+  # Move bottom player to person_a and generate new person_b
+  person_a = person_b
   #print(person_a)
   person_b = generate_new_player()
   #print(person_b)
