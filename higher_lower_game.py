@@ -8,8 +8,8 @@ from higher_lower_art import vs    # VS logo
 # Import game data
 from higher_lower_data import data
 
-# Import clear function
-from replit import clear
+# Import clear function		- Find module different from replit
+#from replit import clear
 
 # Sample data  - contains 50 elements (len(data))
 #data = [
@@ -74,7 +74,7 @@ while continue_game == True:
     if person_a.get('follower_count')  > person_b.get('follower_count'):
       correct_count += 1
       winner = person_a
-      clear()
+      #clear()
     else:
       print("Incorrect. You lose.")
       continue_game = False
@@ -82,7 +82,7 @@ while continue_game == True:
     if person_a.get('follower_count')  < person_b.get('follower_count'):
       correct_count += 1
       winner = person_b
-      clear()
+      #clear()
     else:
       print("Incorrect. You lose.")
       continue_game = False
