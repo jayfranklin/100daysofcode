@@ -45,10 +45,13 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
 money = 0.00
+machine_operable = True
 
 # Print Resources in Coffee Machine
 def print_resources():
+    """ Print Available Resources in the Coffee Machine """
     for k, v in resources.items():
         if k != "Coffee": # Measured in milliliters
             print(f"{k.title()}: {v}ml")      # Print the keys in Title case
@@ -57,6 +60,7 @@ def print_resources():
     print(f"Money: ${money:.2f}")       # Print two decimal places for the float
 
 def take_coins():
+    """ Take coins from user and pass to calculate_change """
     print("Please insert coins.")
     quarters = int(input("How many quarters? "))
     dimes = int(input("How many dimes? "))
@@ -65,6 +69,7 @@ def take_coins():
     return(quarters, dimes, nickels, pennies)
 
 def calculate_change(quarters, dimes, nickels, pennies):
+    """ Take coins from user, calculate the money, and return the value """
     change = 0.00
     for coin in range(0,quarters):
         change += .25
@@ -78,6 +83,7 @@ def calculate_change(quarters, dimes, nickels, pennies):
     return change
 
 def compare_ingredients_to_resources(order):
+    """ Compare Coffee Ingredients to Available Resources.  Return True if available, False if not availeble """
     for item in order:
         if order[item] >= resources[item]:
             print(f"Sorry there is not enough {item}")
@@ -85,12 +91,14 @@ def compare_ingredients_to_resources(order):
     return True
 
 def make_drink(order):
+    """ Remove the drink resources from the available resources """
     for item in order:
         resources[item] -= order[item]
         #print(resources[item])
 
 
 def print_menu_with_costs():
+    """ Print a menu that shows each drink and it's associated cost """
     #print(f"Latte: {MENU['latte']['cost']:.2f}")        # Conversion of float to 2 decimal places is outside 'cost'
     for k, v in MENU.items():
         title = k.title()
@@ -99,10 +107,11 @@ def print_menu_with_costs():
                 print(f"{title}: {value:.2f}")
 
 def turn_off():
+    """ Turn off the Coffee Machine """
     print("Turning off machine.")
+    machine_operable = False
     quit()
 
-machine_operable = True
 while machine_operable is True:
 
     # Prompt user for input.
