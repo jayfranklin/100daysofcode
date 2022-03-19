@@ -16,7 +16,8 @@ def turn_off():
     quit()
 
 while is_operable is True:
-    selection = input(f"What would you like to order {menu.get_items()} ?").lower()
+    # TODO:  Add Menu with prices
+    selection = input(f"What would you like to order {menu.get_items()}? ").lower()
     if selection == "off":
         turn_off()
     elif selection == "report":
