@@ -9,7 +9,6 @@ class MenuItem:
             "coffee": coffee
         }
 
-
 class Menu:
     """Models the Menu with drinks."""
     def __init__(self):
@@ -31,4 +30,6 @@ class Menu:
         for item in self.menu:
             if item.name == order_name:
                 return item
-        print("Sorry that item is not available.")
+        print("Sorry, that item is not available.")
+
+        # TODO: Crashes when a non-valid drink is entered, such as chai #
